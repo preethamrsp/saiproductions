@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montra Studio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      M<span class="logo-box"></span>ANOJ
+    </div>
+
+    <nav class="desktop-nav">
+      <a class="active">Home</a>
+      <a>About Us</a>
+      <a>Services</a>
+      <a>Portfolio</a>
+      <a>Pages</a>
+      <a>Contact Us</a>
+    </nav>
+
+    <a class="quote-btn">GET A QUOTE</a>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  </header>
+
+
+  <!-- =========================
+       MOBILE MENU
+  ========================== -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-header">
+
+      <div class="logo">
+        M<span class="logo-box"></span>ONTRA
+      </div>
+
+      <div class="close-menu" onclick="toggleMenu()">✕</div>
+
+    </div>
+
+    <nav class="mobile-nav">
+
+      <a class="active">HOME</a>
+      <a>ABOUT US</a>
+
+      <div class="mobile-item">
+        SERVICES <span>⌄</span>
+      </div>
+
+      <div class="mobile-item">
+        PORTFOLIO <span>⌄</span>
+      </div>
+
+      <div class="mobile-item">
+        PAGES <span>⌄</span>
+      </div>
+
+      <a>CONTACT US</a>
+
+    </nav>
+
+  </div>
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+
+  <section class="hero">
+
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="./Showreel.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-left">
+
+        <h1>
+          STR<span class="outline"></span>NG <br>
+          CRAFTING VISUALS
+        </h1>
+
+        <a class="showreel">WATCH OUR SHOWREEL</a>
+
+      </div>
+
+
+      <div class="hero-right">
+
+        <div class="avatars">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg">
+        </div>
+
+        <p>
+          Montra is a full-service film production studio delivering bold visuals
+          and powerful narratives.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- LEFT -->
+
+      <div class="footer-col">
+
+        <h2>MONTRA - FILM & <br> VIDEO PRODUCTION</h2>
+
+        <h4>OUR OFFICE</h4>
+
+        <p>
+          123 Montra Studio Bulevard., <br>
+          Los Angeles, CA 90210
+        </p>
+
+        <h4>CONTACT US</h4>
+
+        <p>+1 (800) 234-5678</p>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="footer-col">
+
+        <h3>NAVIGATION</h3>
+
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Services</li>
+          <li>Portfolio</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
+
+      </div>
+
+
+      <!-- NEWSLETTER -->
+
+      <div class="footer-col">
+
+        <h3>SUBSCRIBE TO OUR NEWSLETTER <br> FOR THE LATEST UPDATES</h3>
+
+        <div class="subscribe">
+          <input type="email" placeholder="hello@montrastudio.com">
+          <button>SUBSCRIBE NOW</button>
+        </div>
+
+        <h4>SOCIAL MEDIA</h4>
+
+        <div class="socials">
+          <a>IG</a>
+          <a>FB</a>
+          <a>X</a>
+          <a>YT</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BIG TEXT -->
+
+    <div class="footer-big">
+      MONTRA STUDIO
+    </div>
+
+
+    <hr>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
+
+      <span>Privacy Policy</span>
+      <span>© 2025 Montra Studio. All rights reserved.</span>
+      <span>Terms & Conditions</span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================== -->
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+  </script>
+
+  <script>
+const links = document.querySelectorAll(".desktop-nav a");
+const current = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  if(link.getAttribute("href") === current){
+    link.classList.add("active");
+  }
+});
+</script>
+
+</body>
+</html>
