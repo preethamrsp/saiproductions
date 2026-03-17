@@ -887,9 +887,8 @@ font-size:50px;
   display: block;
 }
 
-
 /* =========================
-   SECTION 2 (FINAL CLEAN + CUT FIX)
+   SECTION 2 (FINAL CLEAN + KEEP EFFECT)
 ========================= */
 
 .section2{
@@ -956,14 +955,13 @@ font-size:50px;
    SERVICES LIST
 ========================= */
 
-/* ROW (🔥 IMPORTANT FIX HERE) */
+/* ✅ KEEPING overflow hidden (cut effect) */
 .service{
   border-top:1px solid rgba(255,255,255,0.08);
   padding:14px 0;
   display:flex;
   align-items:center;
-
-  overflow:hidden;   /* 🔥 THIS MAKES TEXT CUT */
+  overflow:hidden;
 }
 
 .service:last-child{
@@ -972,25 +970,25 @@ font-size:50px;
 
 
 /* =========================
-   TEXT STYLE (CUT EFFECT)
+   TEXT STYLE (KEEP CUT EFFECT)
 ========================= */
 
 .service h1{
   font-family:'Bebas Neue',sans-serif;
   font-size:clamp(25px,4.5vw,65px);
-  line-height:0.65;   /* 🔥 tighter for cut */
+  line-height:0.75;   /* ✅ KEPT */
   letter-spacing:3px;
 
   color:transparent;
   -webkit-text-stroke:0.3px rgba(255,255,255,0.7);
 
-  transform:translateY(20px);  /* 🔥 pushes text down → gets cut */
+  transform:translateY(20px);
   transition:.3s;
 }
 
 
 /* =========================
-   ZIG-ZAG ALIGNMENT
+   ZIG-ZAG ALIGNMENT (DESKTOP)
 ========================= */
 
 .service:nth-child(1){ justify-content:flex-end; }
@@ -1014,28 +1012,43 @@ font-size:50px;
 .service:hover h1{
   color:#fff;
   -webkit-text-stroke:0;
-  transform:translateY(0);  /* optional nice effect */
+  transform:translateY(0);
 }
 
 
 /* =========================
-   RESPONSIVE
+   MOBILE RESPONSIVE (CENTERED + CLEAN)
 ========================= */
 
 @media(max-width:900px){
 
   .section2{
     min-height:auto;
-    padding:80px 0;
+    padding:60px 0;
   }
 
   .section2-top{
     flex-direction:column;
+    align-items:center;       /* ✅ center everything */
+    text-align:center;
+    gap:15px;
   }
 
   .section2-left h2{
-    font-size:38px;
+    font-size:34px;
+    text-align:center;
   }
+
+  .section2-right{
+    max-width:100%;
+    text-align:center;
+  }
+
+  .section2-btn{
+    margin:0 auto;
+  }
+
+  /* SERVICES */
 
   .service{
     justify-content:center !important;
@@ -1043,11 +1056,12 @@ font-size:50px;
 
   .service h1{
     margin:0 !important;
-    font-size:40px;
-    transform:none;
+    text-align:center;
+    font-size:30px;      /* better mobile size */
+    letter-spacing:2px;
   }
-}
 
+}
 
 /* =========================
    SECTION 1 (FINAL PRO CLEAN)
@@ -1209,6 +1223,15 @@ font-size:50px;
 ========================= */
 
 @media(max-width:900px){
+
+   .service h1{
+    margin:0 !important;
+    text-align:center;
+    font-size:34px;
+    letter-spacing:2px;
+
+    line-height:0.9;   /* ✅ FIX: better readability only on mobile */
+  }
 
   .section1{
     padding:60px 0;   /* smaller on mobile */
