@@ -5,11 +5,11 @@
   </div>
 
   <nav class="desktop-nav">
-   <a href="../index.html">Home</a>
-<a href="../pages/aboutus.html">About Us</a>
-<a href="../pages/services.html">Services</a>
-<a href="../pages/portfolio.html">Portfolio</a>
-<a href="../pages/contact.html">Contact Us</a>
+    <a href="../index.html">Home</a>
+    <a href="../pages/aboutus.html">About Us</a>
+    <a href="../pages/services.html">Services</a>
+    <a href="../pages/portfolio.html">Portfolio</a>
+    <a href="../pages/contact.html">Contact Us</a>
   </nav>
 
   <a href="../pages/contact.html" class="quote-btn">GET A QUOTE</a>
@@ -38,25 +38,25 @@
 
 </div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("mobileMenu").classList.toggle("active");
-    }
-  </script>
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+</script>
 
 <script src="../js/include.js"></script>
 
- <script>
-setTimeout(() => {
-  const links = document.querySelectorAll(".desktop-nav a");
-  const currentPage = window.location.pathname.split("/").pop();
+<script>
+  setTimeout(() => {
+    const links = document.querySelectorAll(".desktop-nav a");
+    const currentPage = window.location.pathname.split("/").pop();
 
-  links.forEach(link => {
-    const linkPage = link.getAttribute("href").split("/").pop();
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href").split("/").pop();
 
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-}, 100);
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  }, 100);
 </script>

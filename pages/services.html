@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | SIA Productions</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
- <!-- HEADER -->
+  <!-- HEADER -->
   <div id="header"></div>
   <!-- HERO -->
   <section class="services-hero">
@@ -31,7 +34,7 @@
       <div class="service-content">
         <h2>Weddings</h2>
         <p>
-          We capture every laugh, every tear, every stolen glance — the moments that happen once and last forever. 
+          We capture every laugh, every tear, every stolen glance — the moments that happen once and last forever.
           From pre-wedding shoots to cinematic wedding films, we ensure you relive your day exactly as it felt.
         </p>
       </div>
@@ -45,7 +48,8 @@
       <div class="service-content">
         <h2>Event Production</h2>
         <p>
-          We capture the heartbeat of every event — from product launches and concerts to festivals and corporate summits. 
+          We capture the heartbeat of every event — from product launches and concerts to festivals and corporate
+          summits.
           Every frame reflects the moments that make your event unforgettable.
         </p>
       </div>
@@ -59,7 +63,7 @@
       <div class="service-content">
         <h2>Corporate & Commercials</h2>
         <p>
-          We produce commercials that sell, music videos that move, and brand films that last. 
+          We produce commercials that sell, music videos that move, and brand films that last.
           Sharp, professional visuals crafted to reflect your brand and hold attention.
         </p>
       </div>
@@ -73,7 +77,7 @@
       <div class="service-content">
         <h2>Creative Photography</h2>
         <p>
-          We photograph what makes your subject undeniable. Model shoots, portfolios, and editorials 
+          We photograph what makes your subject undeniable. Model shoots, portfolios, and editorials
           — crafted to stand out and stay remembered.
         </p>
       </div>
@@ -87,7 +91,7 @@
       <div class="service-content">
         <h2>Motion Graphics & VFX</h2>
         <p>
-          We enhance storytelling through motion graphics and VFX that add depth and dimension. 
+          We enhance storytelling through motion graphics and VFX that add depth and dimension.
           Effects that don’t just support — they elevate every frame.
         </p>
       </div>
@@ -95,26 +99,27 @@
 
   </section>
 
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <div id="footer"></div>
 
   <!-- INCLUDE SCRIPT -->
   <script src="../js/include.js"></script>
 
-   <script>
-setTimeout(() => {
-  const links = document.querySelectorAll(".desktop-nav a");
-  const currentPage = window.location.pathname.split("/").pop();
+  <script>
+    setTimeout(() => {
+      const links = document.querySelectorAll(".desktop-nav a");
+      const currentPage = window.location.pathname.split("/").pop();
 
-  links.forEach(link => {
-    const linkPage = link.getAttribute("href").split("/").pop();
+      links.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
 
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-}, 100);
-</script>
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    }, 100);
+  </script>
 
 </body>
+
 </html>

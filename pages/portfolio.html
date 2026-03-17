@@ -1,299 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | SIA Productions</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <style>
-    /* =========================
+  /* =========================
    PORTFOLIO (SCOPED)
 ========================= */
 
-.portfolio-page{
-  background:#000;
-  color:#fff;
-  padding:120px 8%;
-}
+  .portfolio-page {
+    background: #000;
+    color: #fff;
+    padding: 120px 8%;
+  }
 
-/* HEADER */
-.portfolio-page .portfolio-header{
-  text-align:center;
-  margin-bottom:60px;
-}
+  /* HEADER */
+  .portfolio-page .portfolio-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-.portfolio-page .portfolio-header h1{
-  font-family:'Bebas Neue', sans-serif;
-  font-size:80px;
-}
+  .portfolio-page .portfolio-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+  }
 
-.portfolio-page .portfolio-header p{
-  color:#aaa;
-  font-size:18px;
-}
+  .portfolio-page .portfolio-header p {
+    color: #aaa;
+    font-size: 18px;
+  }
 
-/* FILTERS */
-.portfolio-page .portfolio-filters{
-  text-align:center;
-  margin-bottom:50px;
-}
+  /* FILTERS */
+  .portfolio-page .portfolio-filters {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
-.portfolio-page .portfolio-filters button{
-  background:none;
-  border:1px solid #333;
-  color:#aaa;
-  padding:10px 20px;
-  margin:5px;
-  cursor:pointer;
-  transition:0.3s;
-}
+  .portfolio-page .portfolio-filters button {
+    background: none;
+    border: 1px solid #333;
+    color: #aaa;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-.portfolio-page .portfolio-filters button.active,
-.portfolio-page .portfolio-filters button:hover{
-  background:#fff;
-  color:#000;
-}
+  .portfolio-page .portfolio-filters button.active,
+  .portfolio-page .portfolio-filters button:hover {
+    background: #fff;
+    color: #000;
+  }
 
-/* GRID */
-.portfolio-page .portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
+  /* GRID */
+  .portfolio-page .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
 
-/* ITEM */
-.portfolio-page .portfolio-item{
-  position:relative;
-  overflow:hidden;
-  cursor:pointer;
-}
+  /* ITEM */
+  .portfolio-page .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
 
-.portfolio-page .portfolio-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.5s;
-}
+  .portfolio-page .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+  }
 
-/* OVERLAY */
-.portfolio-page .overlay{
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  padding:20px;
-  background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-  transform:translateY(100%);
-  transition:0.4s;
-}
+  /* OVERLAY */
+  .portfolio-page .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    transform: translateY(100%);
+    transition: 0.4s;
+  }
 
-.portfolio-page .overlay h3{
-  font-size:20px;
-}
+  .portfolio-page .overlay h3 {
+    font-size: 20px;
+  }
 
-.portfolio-page .overlay span{
-  font-size:14px;
-  color:#ccc;
-}
+  .portfolio-page .overlay span {
+    font-size: 14px;
+    color: #ccc;
+  }
 
-/* HOVER */
-.portfolio-page .portfolio-item:hover img{
-  transform:scale(1.1);
-}
+  /* HOVER */
+  .portfolio-page .portfolio-item:hover img {
+    transform: scale(1.1);
+  }
 
-.portfolio-page .portfolio-item:hover .overlay{
-  transform:translateY(0);
-}
+  .portfolio-page .portfolio-item:hover .overlay {
+    transform: translateY(0);
+  }
 
-/* LIGHTBOX */
-.portfolio-lightbox{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
+  /* LIGHTBOX */
+  .portfolio-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
 
-.portfolio-lightbox img{
-  max-width:90%;
-  max-height:80%;
-}
+  .portfolio-lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+  }
 
-.portfolio-lightbox.active{
-  display:flex;
-}
+  .portfolio-lightbox.active {
+    display: flex;
+  }
 
-/* =========================
+  /* =========================
    RESPONSIVE
 ========================= */
 
-/* Tablet */
-@media(max-width:1024px){
-  .portfolio-page .portfolio-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-/* Mobile */
-@media(max-width:600px){
-
-  .portfolio-page{
-    padding:100px 5%;
+  /* Tablet */
+  @media(max-width:1024px) {
+    .portfolio-page .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .portfolio-page .portfolio-header h1{
-    font-size:50px;
-  }
+  /* Mobile */
+  @media(max-width:600px) {
 
-  .portfolio-page .portfolio-grid{
-    grid-template-columns:1fr;
-  }
+    .portfolio-page {
+      padding: 100px 5%;
+    }
 
-  .portfolio-page .portfolio-filters button{
-    padding:8px 14px;
-    font-size:14px;
-  }
+    .portfolio-page .portfolio-header h1 {
+      font-size: 50px;
+    }
 
-}
+    .portfolio-page .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio-page .portfolio-filters button {
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+
+  }
 </style>
+
 <body>
- <!-- HEADER -->
-  <div id="header"></div>
-<section class="portfolio-page">
-
   <!-- HEADER -->
-  <div class="portfolio-header">
-    <h1>Portfolio</h1>
-    <p>Crafting stories through visuals — a glimpse of our work.</p>
+  <div id="header"></div>
+  <section class="portfolio-page">
+
+    <!-- HEADER -->
+    <div class="portfolio-header">
+      <h1>Portfolio</h1>
+      <p>Crafting stories through visuals — a glimpse of our work.</p>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="portfolio-filters">
+      <button class="active" onclick="filterItems(event,'all')">All</button>
+      <button onclick="filterItems(event,'wedding')">Weddings</button>
+      <button onclick="filterItems(event,'event')">Events</button>
+      <button onclick="filterItems(event,'commercial')">Commercial</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item" data-category="wedding">
+        <img src="https://picsum.photos/600/800?1" onclick="openLightbox(this.src)">
+        <div class="overlay">
+          <h3>Royal Wedding</h3>
+          <span>Wedding Film</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="event">
+        <img src="https://picsum.photos/600/800?2" onclick="openLightbox(this.src)">
+        <div class="overlay">
+          <h3>Music Festival</h3>
+          <span>Event Production</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="commercial">
+        <img src="https://picsum.photos/600/800?3" onclick="openLightbox(this.src)">
+        <div class="overlay">
+          <h3>Brand Shoot</h3>
+          <span>Commercial</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="wedding">
+        <img src="https://picsum.photos/600/800?4" onclick="openLightbox(this.src)">
+        <div class="overlay">
+          <h3>Destination Wedding</h3>
+          <span>Wedding</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="event">
+        <img src="https://picsum.photos/600/800?5" onclick="openLightbox(this.src)">
+        <div class="overlay">
+          <h3>Corporate Event</h3>
+          <span>Event</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-category="commercial">
+        <img src="https://picsum.photos/600/800?6" onclick="openLightbox(this.src)">
+        <div class="overlay">
+          <h3>Product Ad</h3>
+          <span>Commercial</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="portfolio-lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
   </div>
-
-  <!-- FILTERS -->
-  <div class="portfolio-filters">
-    <button class="active" onclick="filterItems(event,'all')">All</button>
-    <button onclick="filterItems(event,'wedding')">Weddings</button>
-    <button onclick="filterItems(event,'event')">Events</button>
-    <button onclick="filterItems(event,'commercial')">Commercial</button>
-  </div>
-
-  <!-- GRID -->
-  <div class="portfolio-grid">
-
-    <div class="portfolio-item" data-category="wedding">
-      <img src="https://picsum.photos/600/800?1" onclick="openLightbox(this.src)">
-      <div class="overlay">
-        <h3>Royal Wedding</h3>
-        <span>Wedding Film</span>
-      </div>
-    </div>
-
-    <div class="portfolio-item" data-category="event">
-      <img src="https://picsum.photos/600/800?2" onclick="openLightbox(this.src)">
-      <div class="overlay">
-        <h3>Music Festival</h3>
-        <span>Event Production</span>
-      </div>
-    </div>
-
-    <div class="portfolio-item" data-category="commercial">
-      <img src="https://picsum.photos/600/800?3" onclick="openLightbox(this.src)">
-      <div class="overlay">
-        <h3>Brand Shoot</h3>
-        <span>Commercial</span>
-      </div>
-    </div>
-
-    <div class="portfolio-item" data-category="wedding">
-      <img src="https://picsum.photos/600/800?4" onclick="openLightbox(this.src)">
-      <div class="overlay">
-        <h3>Destination Wedding</h3>
-        <span>Wedding</span>
-      </div>
-    </div>
-
-    <div class="portfolio-item" data-category="event">
-      <img src="https://picsum.photos/600/800?5" onclick="openLightbox(this.src)">
-      <div class="overlay">
-        <h3>Corporate Event</h3>
-        <span>Event</span>
-      </div>
-    </div>
-
-    <div class="portfolio-item" data-category="commercial">
-      <img src="https://picsum.photos/600/800?6" onclick="openLightbox(this.src)">
-      <div class="overlay">
-        <h3>Product Ad</h3>
-        <span>Commercial</span>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- LIGHTBOX -->
-<div class="portfolio-lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <div id="footer"></div>
 
   <!-- INCLUDE SCRIPT -->
   <script src="../js/include.js"></script>
 
-   <script>
-setTimeout(() => {
-  const links = document.querySelectorAll(".desktop-nav a");
-  const currentPage = window.location.pathname.split("/").pop();
+  <script>
+    setTimeout(() => {
+      const links = document.querySelectorAll(".desktop-nav a");
+      const currentPage = window.location.pathname.split("/").pop();
 
-  links.forEach(link => {
-    const linkPage = link.getAttribute("href").split("/").pop();
+      links.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
 
-    if (linkPage === currentPage) {
-      link.classList.add("active");
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    }, 100);
+  </script>
+
+  <script>
+    function filterItems(e, category) {
+      let items = document.querySelectorAll(".portfolio-page .portfolio-item");
+      let buttons = document.querySelectorAll(".portfolio-page .portfolio-filters button");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      e.target.classList.add("active");
+
+      items.forEach(item => {
+        if (category === "all" || item.dataset.category === category) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
     }
-  });
-}, 100);
-</script>
 
-<script>
-
-function filterItems(e, category){
-  let items = document.querySelectorAll(".portfolio-page .portfolio-item");
-  let buttons = document.querySelectorAll(".portfolio-page .portfolio-filters button");
-
-  buttons.forEach(btn => btn.classList.remove("active"));
-  e.target.classList.add("active");
-
-  items.forEach(item => {
-    if(category === "all" || item.dataset.category === category){
-      item.style.display = "block";
-    } else {
-      item.style.display = "none";
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").classList.add("active");
     }
-  });
-}
 
-function openLightbox(src){
-  document.getElementById("lightbox-img").src = src;
-  document.getElementById("lightbox").classList.add("active");
-}
-
-function closeLightbox(){
-  document.getElementById("lightbox").classList.remove("active");
-}
-
-</script>
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+  </script>
 
 </body>
+
 </html>

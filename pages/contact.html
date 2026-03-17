@@ -1,283 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
- /* =========================
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* =========================
    CONTACT (PRO VERSION)
 ========================= */
 
-.contact-section{
-  background:#000;
-  padding:120px 8%;
-}
+    .contact-section {
+      background: #000;
+      padding: 120px 8%;
+    }
 
-.contact-container{
-  display:flex;
-  gap:80px;
-  align-items:flex-start;
-}
+    .contact-container {
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+    }
 
-/* LEFT */
-.contact-left{
-  flex:1;
-}
+    /* LEFT */
+    .contact-left {
+      flex: 1;
+    }
 
-.contact-left h2{
-  font-family:'Bebas Neue', sans-serif;
-  font-size:70px;
-  margin-bottom:20px;
-}
+    .contact-left h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
 
-.contact-subtext{
-  color:#aaa;
-  margin-bottom:50px;
-  font-size:18px;
-  max-width:400px;
-}
+    .contact-subtext {
+      color: #aaa;
+      margin-bottom: 50px;
+      font-size: 18px;
+      max-width: 400px;
+    }
 
-/* INFO ITEMS */
-.info-item{
-  display:flex;
-  gap:15px;
-  margin-bottom:30px;
-  align-items:flex-start;
-}
+    /* INFO ITEMS */
+    .info-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+    }
 
-.info-item span{
-  font-size:22px;
-}
+    .info-item span {
+      font-size: 22px;
+    }
 
-.info-item h4{
-  font-size:14px;
-  color:#888;
-  margin-bottom:5px;
-}
+    .info-item h4 {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 5px;
+    }
 
-.info-item p{
-  font-size:17px;
-}
+    .info-item p {
+      font-size: 17px;
+    }
 
-/* RIGHT (FORM CARD) */
-.contact-right{
-  flex:1;
-  background:rgba(255,255,255,0.03);
-  padding:40px;
-  border-radius:12px;
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.08);
-}
+    /* RIGHT (FORM CARD) */
+    .contact-right {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 40px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-/* INPUT GROUP (FLOATING LABEL) */
-.input-group{
-  position:relative;
-  margin-bottom:30px;
-}
+    /* INPUT GROUP (FLOATING LABEL) */
+    .input-group {
+      position: relative;
+      margin-bottom: 30px;
+    }
 
-.input-group input,
-.input-group textarea{
-  width:100%;
-  padding:12px 5px;
-  background:transparent;
-  border:none;
-  border-bottom:1px solid #333;
-  color:#fff;
-  font-size:16px;
-  outline:none;
-}
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 12px 5px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #333;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+    }
 
-.input-group textarea{
-  height:120px;
-  resize:none;
-}
+    .input-group textarea {
+      height: 120px;
+      resize: none;
+    }
 
-/* LABEL */
-.input-group label{
-  position:absolute;
-  left:5px;
-  top:12px;
-  color:#777;
-  font-size:14px;
-  pointer-events:none;
-  transition:0.3s;
-}
+    /* LABEL */
+    .input-group label {
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      color: #777;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.3s;
+    }
 
-/* FLOAT EFFECT */
-.input-group input:focus + label,
-.input-group input:valid + label,
-.input-group textarea:focus + label,
-.input-group textarea:valid + label{
-  top:-10px;
-  font-size:12px;
-  color:#fff;
-}
+    /* FLOAT EFFECT */
+    .input-group input:focus+label,
+    .input-group input:valid+label,
+    .input-group textarea:focus+label,
+    .input-group textarea:valid+label {
+      top: -10px;
+      font-size: 12px;
+      color: #fff;
+    }
 
-/* BORDER ANIMATION */
-.input-group input:focus,
-.input-group textarea:focus{
-  border-bottom:1px solid #fff;
-}
+    /* BORDER ANIMATION */
+    .input-group input:focus,
+    .input-group textarea:focus {
+      border-bottom: 1px solid #fff;
+    }
 
-/* BUTTON */
-.contact-right button{
-  margin-top:10px;
-  padding:14px;
-  width:100%;
-  background:#fff;
-  color:#000;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-  border-radius:6px;
-}
+    /* BUTTON */
+    .contact-right button {
+      margin-top: 10px;
+      padding: 14px;
+      width: 100%;
+      background: #fff;
+      color: #000;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 6px;
+    }
 
-.contact-right button:hover{
-  background:#ddd;
-  transform:translateY(-2px);
-}
+    .contact-right button:hover {
+      background: #ddd;
+      transform: translateY(-2px);
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .contact-container{
-    flex-direction:column;
-    gap:50px;
-  }
+    /* RESPONSIVE */
+    @media(max-width:900px) {
+      .contact-container {
+        flex-direction: column;
+        gap: 50px;
+      }
 
-  .contact-left h2{
-    font-size:50px;
-  }
-}
-</style>
+      .contact-left h2 {
+        font-size: 50px;
+      }
+    }
+  </style>
 
 </head>
- <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style.css">
+
 <body>
-<!-- HEADER -->
+  <!-- HEADER -->
   <div id="header"></div>
-<section class="contact-section">
+  <section class="contact-section">
 
-  <div class="contact-container">
+    <div class="contact-container">
 
-    <!-- LEFT -->
-    <div class="contact-left">
-      <h2>Contact</h2>
-      <p class="contact-subtext">
-        Let’s build something meaningful together. Reach out and we’ll get back to you quickly.
-      </p>
+      <!-- LEFT -->
+      <div class="contact-left">
+        <h2>Contact</h2>
+        <p class="contact-subtext">
+          Let’s build something meaningful together. Reach out and we’ll get back to you quickly.
+        </p>
 
-      <div class="contact-info">
+        <div class="contact-info">
 
-        <div class="info-item">
-          <span>📍</span>
-          <div>
-            <h4>Address</h4>
-            <p>No.156/8-P19 21st cross road bhagavati layout<br>
-Bengaluru, Karnataka 560076 India</p>
+          <div class="info-item">
+            <span>📍</span>
+            <div>
+              <h4>Address</h4>
+              <p>No.156/8-P19 21st cross road bhagavati layout<br>
+                Bengaluru, Karnataka 560076 India</p>
+            </div>
           </div>
-        </div>
 
-        <div class="info-item">
-          <span>📞</span>
-          <div>
-            <h4>Phone</h4>
-            <p>+91 97409 74343</p>
+          <div class="info-item">
+            <span>📞</span>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 97409 74343</p>
+            </div>
           </div>
-        </div>
 
-        <div class="info-item">
-          <span>✉️</span>
-          <div>
-            <h4>Email</h4>
-            <p>info@siaproductions.in</p>
+          <div class="info-item">
+            <span>✉️</span>
+            <div>
+              <h4>Email</h4>
+              <p>info@siaproductions.in</p>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
+
+      <!-- RIGHT -->
+      <div class="contact-right">
+        <form id="contactForm">
+
+          <div class="input-group">
+            <input type="text" id="name" required>
+            <label>Name</label>
+          </div>
+
+          <div class="input-group">
+            <input type="tel" id="phone" required>
+            <label>Phone Number</label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="email" required>
+            <label>Email Address</label>
+          </div>
+
+          <div class="input-group">
+            <textarea id="message" required></textarea>
+            <label>Message</label>
+          </div>
+
+          <button type="submit">Send Message →</button>
+
+        </form>
+      </div>
+
     </div>
 
-    <!-- RIGHT -->
-    <div class="contact-right">
-      <form id="contactForm">
+  </section>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-        <div class="input-group">
-          <input type="text" id="name" required>
-          <label>Name</label>
-        </div>
+      let name = document.getElementById("name").value;
+      let phone = document.getElementById("phone").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
 
-        <div class="input-group">
-          <input type="tel" id="phone" required>
-          <label>Phone Number</label>
-        </div>
+      let whatsappNumber = "9740974343"; // 👉 replace with your number (no +)
 
-        <div class="input-group">
-          <input type="email" id="email" required>
-          <label>Email Address</label>
-        </div>
-
-        <div class="input-group">
-          <textarea id="message" required></textarea>
-          <label>Message</label>
-        </div>
-
-        <button type="submit">Send Message →</button>
-
-      </form>
-    </div>
-
-  </div>
-
-</section>
-<script>
-
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
-
-  let whatsappNumber = "9740974343"; // 👉 replace with your number (no +)
-
-  let text = `Hello, I have a new enquiry:%0A
+      let text = `Hello, I have a new enquiry:%0A
 Name: ${name}%0A
 Phone: ${phone}%0A
 Email: ${email}%0A
 Message: ${message}`;
 
-  let url = `https://wa.me/${whatsappNumber}?text=${text}`;
+      let url = `https://wa.me/${whatsappNumber}?text=${text}`;
 
-  window.open(url, "_blank");
-});
-
-</script>
-<!-- FOOTER -->
+      window.open(url, "_blank");
+    });
+  </script>
+  <!-- FOOTER -->
   <div id="footer"></div>
 
 
   <!-- INCLUDE SCRIPT -->
   <script src="../js/include.js"></script>
 
-   <script>
-setTimeout(() => {
-  const links = document.querySelectorAll(".desktop-nav a");
-  const currentPage = window.location.pathname.split("/").pop();
+  <script>
+    setTimeout(() => {
+      const links = document.querySelectorAll(".desktop-nav a");
+      const currentPage = window.location.pathname.split("/").pop();
 
-  links.forEach(link => {
-    const linkPage = link.getAttribute("href").split("/").pop();
+      links.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
 
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-}, 100);
-</script>
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    }, 100);
+  </script>
 
 
 </body>
+
 </html>
