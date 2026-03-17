@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Sia Productions</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+<!-- =========================
+     ABOUT HERO (WITH IMAGE)
+========================== -->
+
+<section class="about-hero">
+
+  <div class="about-bg">
+    <img src="../assets/about-hero.jpg" alt="">
+  </div>
+
+  <div class="about-overlay"></div>
+
+  <div class="about-content">
+    <h1>ABOUT US</h1>
+    <p>
+     Sia Productions is a creative photo and video production house built with the vision of bringing your story to life. We aim to capture the vision in your eyes and deliver it through our frames. Whether it’s a corporate event, commercial shoot, or brand content, We craft visuals that are bold, impactful, and unforgettable.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT INTRO (IMAGE + TEXT)
+========================== -->
+<section class="about-intro">
+
+  <div class="about-intro-container">
+
+    <!-- IMAGE -->
+    <div class="about-image">
+      <img src="../assets/6.png" alt="">
+    </div>
+
+    <!-- TEXT -->
+    <div class="about-text">
+      <h2>
+        WE CREATE <br>
+        VISUALS THAT <br>
+        INSPIRE
+      </h2>
+
+      <p>
+        At Sia Productions, we believe every story deserves to be told beautifully.
+        From weddings to commercials, we bring a cinematic approach to every project.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     VALUES (CARDS)
+========================== -->
+
+<section class="about-values">
+
+  <div class="container">
+
+    <div class="value">
+      <img src="../assets/our mission.png">
+      <h3>OUR MISSION</h3>
+      <p>Transform ideas into powerful visual stories.</p>
+    </div>
+
+    <div class="value">
+      <img src="../assets/our vision.png">
+      <h3>OUR VISION</h3>
+      <p>Become a globally recognized production house.</p>
+    </div>
+
+    <div class="value">
+      <img src="../assets/our approach.png">
+      <h3>OUR APPROACH</h3>
+      <p>Blend storytelling, design, and technology.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     IMAGE SHOWCASE (🔥 NEW)
+========================== -->
+
+<section class="about-gallery">
+
+  <div class="gallery-header">
+
+    <div class="gallery-text">
+      <h2>OUR WORK</h2>
+      <p>A glimpse of our latest visual stories and creative productions.</p>
+    </div>
+
+    <a href="../pages/portfolio.html" class="view-more">
+      VIEW MORE →
+    </a>
+
+  </div>
+
+  <div class="gallery-grid">
+     <img src="../assets/portfolio/1.JPG">
+    <img src="../assets/portfolio/2.JPG">
+    <img src="../assets/portfolio/3.JPG">
+    <img src="../assets/portfolio/4.JPG">
+
+  </div>
+
+</section>
+
+
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+
+  <!-- INCLUDE SCRIPT -->
+  <script src="../js/include.js"></script>
+
+   <script>
+setTimeout(() => {
+  const links = document.querySelectorAll(".desktop-nav a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+}, 100);
+</script>
+
+</body>
+</html>
