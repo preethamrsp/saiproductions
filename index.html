@@ -12,6 +12,7 @@
     rel="stylesheet">
 </head>
 
+
 <body>
 
   <!-- =========================
@@ -180,6 +181,82 @@
   </div>
 
 </section>
+<section class="section6">
+
+  <div class="section6-container">
+
+    <div class="section6-header">
+  <h2>PORTFOLIO</h2>
+  <p>A selection of our latest creative work across films, commercials, and visual storytelling.</p>
+</div>
+
+    <!-- ROW 1 -->
+    <div class="grid-row row-top">
+
+      <div class="card card-large" onclick="openVideo('./assets/Showreel.mp4')">
+        <div class="video">
+          <video src="./assets/Showreel.mp4" muted loop playsinline></video>
+          <div class="play"></div>
+        </div>
+        <h3>URBAN SOUL</h3>
+        <span class="tag">• Music Video</span>
+      </div>
+
+      <div class="card card-small" onclick="openVideo('./assets/Showreel.mp4')">
+        <div class="video">
+          <video src="./assets/Showreel.mp4" muted loop playsinline></video>
+          <div class="play"></div>
+        </div>
+        <h3>ECHOES OF FASHION</h3>
+        <span class="tag">• Commercial Ad</span>
+      </div>
+
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="grid-row row-full">
+      <div class="card card-full" onclick="openVideo('./assets/Showreel.mp4')">
+        <div class="video">
+          <video src="./assets/Showreel.mp4" muted loop playsinline></video>
+          <div class="play"></div>
+        </div>
+        <h3>THE JOURNEY</h3>
+        <span class="tag">• Travel Documentary</span>
+      </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="grid-row row-bottom">
+
+      <div class="card card-small" onclick="openVideo('./assets/Showreel.mp4')">
+        <div class="video">
+          <video src="./assets/Showreel.mp4" muted loop playsinline></video>
+          <div class="play"></div>
+        </div>
+        <h3>LEGACY</h3>
+        <span class="tag">• Short Film</span>
+      </div>
+
+      <div class="card card-large" onclick="openVideo('./assets/Showreel.mp4')">
+        <div class="video">
+          <video src="./assets/Showreel.mp4" muted loop playsinline></video>
+          <div class="play"></div>
+        </div>
+        <h3>LAUNCH BOLD</h3>
+        <span class="tag">• Product Teaser</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FULLSCREEN VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <span class="close" onclick="closeVideo()">×</span>
+  <video id="modalVideo" controls></video>
+</div>
 
   <section class="section2">
 
@@ -217,7 +294,9 @@
 
 </section>
 
-  <section class="section3">
+
+
+  <!-- <section class="section3">
 
   <div class="section3-box">
 
@@ -238,7 +317,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
 </section>
 
@@ -661,6 +740,31 @@ links.forEach(link => {
   }
 });
 </script>
+
+<script>
+function openVideo(src){
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("modalVideo");
+
+  video.src = src;
+  modal.classList.add("active");
+
+  // play video
+  video.play();
+}
+
+function closeVideo(){
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("modalVideo");
+
+  modal.classList.remove("active");
+
+  // stop video
+  video.pause();
+  video.src = "";
+}
+</script>
+
 
 </body>
 </html>
