@@ -21,15 +21,16 @@ body{
 ========================= */
 
 .navbar{
-  position:absolute;
+  position:absolute; /* ✅ FIXED (was absolute) */
   top:0;
   left:0;
   width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:25px 8%;
-  z-index:10;
+  padding:20px 8%;
+  z-index:1000; /* ✅ ensure above everything */
+   background:transparent; /* ✅ prevents overlap issues */
 }
 
 .logo{
@@ -44,6 +45,14 @@ body{
   height:18px;
   border:4px solid #9a0d1b;
   margin:0 6px;
+}
+
+/* =========================
+   DESKTOP NAV
+========================= */
+
+.desktop-nav{
+  display:flex; /* ✅ ensure visible on desktop */
 }
 
 .desktop-nav a{
@@ -67,6 +76,10 @@ body{
   font-size:clamp(16px,1.1vw,20px);
 }
 
+/* =========================
+   BUTTON
+========================= */
+
 .quote-btn{
   background:#9a0d1b;
   padding:12px 26px;
@@ -79,12 +92,17 @@ body{
   background:#6a040f;
 }
 
+/* =========================
+   MENU TOGGLE
+========================= */
+
 .menu-toggle{
   display:none;
   font-size:28px;
   cursor:pointer;
+  color:#fff;
+  z-index:1100; /* ✅ above navbar */
 }
-
 
 /* =========================
    MOBILE MENU
@@ -98,7 +116,7 @@ body{
   height:100vh;
   background:linear-gradient(90deg,#000 0%, #111 60%, #1a1a1a 100%);
   transition:.4s ease;
-  z-index:999;
+  z-index:2000; /* ✅ higher than navbar */
   display:flex;
   flex-direction:column;
   padding:30px 8%;
@@ -108,13 +126,15 @@ body{
   left:0;
 }
 
-/* MOBILE HEADER */
+/* =========================
+   MOBILE HEADER
+========================= */
 
 .mobile-header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:80px;
+  margin-bottom:60px;
 }
 
 .close-menu{
@@ -129,13 +149,14 @@ body{
   cursor:pointer;
 }
 
-/* MOBILE NAV ITEMS */
+/* =========================
+   MOBILE NAV
+========================= */
 
 .mobile-nav{
   display:flex;
   flex-direction:column;
-  align-items:left;
-  gap:40px;
+  gap:35px;
 }
 
 .mobile-nav a,
@@ -164,6 +185,22 @@ body{
   font-size:16px;
 }
 
+/* =========================
+   RESPONSIVE FIX (MOST IMPORTANT)
+========================= */
+
+@media(max-width: 768px){
+
+  .desktop-nav,
+  .quote-btn{
+    display:none; /* ✅ hide desktop items */
+  }
+
+  .menu-toggle{
+    display:block; /* ✅ show hamburger */
+  }
+
+}
 
 /* =========================
    HERO SECTION
@@ -1880,5 +1917,123 @@ font-size:50px;
     grid-template-columns:1fr 1fr;
     padding:0 20px;
   }
+}
 
+
+/* =========================
+   RESET
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+.services-hero{
+  padding:140px 20px 80px;
+  text-align:center;
+}
+
+.services-hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:90px;
+  letter-spacing:2px;
+}
+
+.services-hero p{
+  margin-top:10px;
+  color:#aaa;
+  font-size:16px;
+}
+
+/* =========================
+   SERVICES SECTION
+========================= */
+.services-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:100px;
+  padding-bottom:100px;
+}
+
+/* CARD */
+.service-card{
+  display:flex;
+  align-items:center;
+  gap:50px;
+}
+
+/* Reverse layout */
+.service-card.reverse{
+  flex-direction:row-reverse;
+}
+
+/* IMAGE */
+.service-image{
+  flex:1;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+.service-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.service-image img:hover{
+  transform:scale(1.05);
+}
+
+/* CONTENT */
+.service-content{
+  flex:1;
+}
+
+.service-content h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.service-content p{
+  color:#bbb;
+  line-height:1.7;
+  font-size:16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+  .service-card{
+    flex-direction:column;
+  }
+
+  .service-card.reverse{
+    flex-direction:column;
+  }
+
+  .services-hero h1{
+    font-size:60px;
+  }
+
+  .service-content h2{
+    font-size:32px;
+  }
 }
